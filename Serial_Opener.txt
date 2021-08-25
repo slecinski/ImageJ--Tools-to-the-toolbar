@@ -1,0 +1,3 @@
+macro "Serial_Opener Action Tool - R7099C059R4399C255F1699R1699" {
+	run("Serial Opener");
+}
