@@ -1,11 +1,14 @@
-//Macro create a binary mask from stored ROI selection 
+// Aim of the macro : Create a binary mask from ROI selections and/or overlays 
+// Description : Detect overlays or selection stored in ROI-Manager and generate a black & white binary mask accordingly
+// when no selection are found - the macro will pause and ask for selections - clicking "OK" without adding new selections will generate a default 8bit binary mask
+
 
 if (nImages == 0) {
 	showMessage("Macro error", "There is no images open");
 	exit
 }
 
-//// Manage Overlay
+//// Manage Overlay if there is
 RoiCount = roiManager("count");
 if (Overlay.size != 0){
 	run("To ROI Manager"); 
@@ -21,7 +24,6 @@ else {
 			run("Convert to Mask");
 			exit
 		}
-		
 	}
 }	
 
