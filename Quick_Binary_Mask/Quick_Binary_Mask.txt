@@ -1,0 +1,3 @@
+macro "Quick Binary Mask Action Tool - C000F9999F1199F1999F9199C245V5588" {
+	run("Quick Binary Mask");
+}
